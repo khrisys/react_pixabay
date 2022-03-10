@@ -1,7 +1,7 @@
 import './App.css';
 import Counter from "./components/Counter";
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 /**
  * COMPOSANT  STATELESS CAR C'EST UNE FONCTION qui retourne un rendu (le composant Stateful est un vrai composant avec une classe)
@@ -12,8 +12,9 @@ function App(){
 	return (
 
 		//PROPS : transmettre des proprietes au composant Counter
-		<div>
-			<Counter title="Titre counter" value={1}/>
+		<div className="mt-3 m-5">
+			<Counter title="Arc en ciel" value={1} image="images/aec.jpg"/>
+			<Counter title="Eau mysterieuse" value={2} image="images/eau.jpg"/>
 		</div>
 
 
