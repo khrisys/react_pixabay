@@ -8,13 +8,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
  * @returns {*}
  * @constructor
  */
-function App(){
+function App() {
+
 	return (
+
 
 		//PROPS : transmettre des proprietes au composant Counter
 		<div className="mt-3 m-5">
-			<Counter title="Arc en ciel" value={1} image="images/aec.jpg"/>
-			<Counter title="Eau mysterieuse" value={2} image="images/eau.jpg"/>
+			<Counter title="Arc en ciel" value={51} photo="images/aec.jpg" desc="aec"/>
+			<Counter title="Eau mysterieuse" value={2} photo="images/eau.jpg" desc="eau mysterieuse"/>
+			<Counter title="Test desc balise" value={3} photo="" desc="texte en cas de non affichage d'image"/>
 		</div>
 
 
