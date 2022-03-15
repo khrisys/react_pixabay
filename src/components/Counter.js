@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import BasicRating from "./BasicRating";
 
 //import {Buffer} from "buffer";
 
@@ -58,8 +59,18 @@ class Counter extends Component {
 		const photo = this.props.photo;
 		const desc = this.props.desc;
 
+
 		return (
 			<div className="card">
+				<BasicRating />
+				{/*		<Button variant="outlined">Primary</Button>
+				 <Button variant="outlined" disabled>
+				 Disabled
+				 </Button>
+				 <Button variant="outlined" href="#outlined-buttons">
+				 Link
+				 </Button>*/}
+
 
 				{/*Afficher le titre avec les PROPRIETES*/}
 				<div className="card-header"><strong>{this.props.title} : {this.state.counter}</strong></div>
@@ -72,12 +83,10 @@ class Counter extends Component {
 				<div className="card-body">
 					{this.state.list.map((v, index) =>
 						<span className="fw-bold">{index}
-						<img className="m-1" key={v.id} width={100} src={photo} alt={desc}/>
+							<img className="m-1" key={v.id} width={100} src={photo} alt={desc}/>
 						</span>
 					)}
 				</div>
-
-
 			</div>
 
 		);
