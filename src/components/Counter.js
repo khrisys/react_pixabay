@@ -10,7 +10,9 @@ import React, {Component} from 'react';
  */
 class Counter extends Component {
 
-	photo= "images/aec.jpg";
+	photo = "images/aec.jpg";
+	title = "titre par défaut dans la page";
+	desc = "photo manquante";
 
 	/**
 	 * Constructeur permet de definir les var stateful. Ce sont les memes variables que les props, mais elles sont stateful
@@ -73,17 +75,18 @@ class Counter extends Component {
 
 
 				{/*Afficher le titre avec les PROPRIETES*/}
-				<div className="card-header"><strong>{this.props.title} : {this.state.counter}</strong></div>
+				<div className="card-header"><strong>{this.props.title ? this.props.title : this.title} : {this.state.counter}</strong></div>
 				<div>
 					<button onClick={() => this.incremen('+')} className="btn btn-info m-1">+</button>
 					<button onClick={() => this.incremen('-')} className="btn btn-info right">-</button>
 				</div>
+				{/*AFFICHAGE D'UNE LISTE*/}
 				{/*A l'interieur de la fonction map, appeler une lambda (avec valeur et index)
 				 Definir un index dans la function map et s'en servir de "key" afin de bien specifier chaque element de, la liste*/}
 				<div className="card-body">
 					{this.state.list.map((v, index) =>
-						<span className="fw-bold">{index}
-							<img className="m-1" key={v.id} width={100} src={photo} alt={desc}/>
+						<span key={index} className="fw-bold">{index}
+							<img className="m-1"  width={100} src={photo ? this.props.photo : this.photo} alt={desc ? this.props.desc : this.desc}/>
 						</span>
 					)}
 				</div>
