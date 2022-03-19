@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import BasicRating from "./BasicRating";
 
-//import {Buffer} from "buffer";
 
 /**
  * COMPOSANT STATEFUL qui etend le composant principal "Component"
@@ -12,7 +10,7 @@ import BasicRating from "./BasicRating";
  */
 class Counter extends Component {
 
-	photo;
+	photo= "images/aec.jpg";
 
 	/**
 	 * Constructeur permet de definir les var stateful. Ce sont les memes variables que les props, mais elles sont stateful
@@ -28,14 +26,14 @@ class Counter extends Component {
 	}
 
 	/**
-	 * **declaration : nom de la fonction = lambda function (ici, avec param)
+	 * Indrémentation et décrémentation des photos
+	 *Signature :  "declaration de la fonction" = "lambda function (ici, avec param 'op')"
 	 *
 	 * On ne peut changer la valeur d'un state uniquement qu'à l'interieur de la function "setState()". On met des accolades dans la methode car on manipule du js
 	 * @param op
 	 */
 	incremen = (op) => {
 		let c = this.state.counter;
-
 		if (op === "+")
 			c += 1;
 		else if (op === "-") c -= 1;
@@ -43,6 +41,7 @@ class Counter extends Component {
 		if (c <= 0 && op === '-') {
 			c = 0;
 		}
+
 		/*Remplissage d'un tableau*/
 		this.setState({
 			counter: c,
@@ -61,8 +60,9 @@ class Counter extends Component {
 
 
 		return (
+
 			<div className="card">
-				<BasicRating />
+				{/*<BasicRating />*/}
 				{/*		<Button variant="outlined">Primary</Button>
 				 <Button variant="outlined" disabled>
 				 Disabled
