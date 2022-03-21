@@ -28,18 +28,31 @@ class About extends Component {
 
 	/**
 	 * Construction d'un objet 'skill' et à la liste des skills existantes
+	 * Prise en charge d'une liste de competences vide
 	 *
 	 * !!! La notation 'skills:[...this.state.skills]' correspond à la copie d'un tableau de les elements/objets existant. A ce tableau, j'insere à la fin un nouvel ig grace à
 	 * 'id', et dont la valeur est egale à 'title'
 	 */
 	onAddNewSkill = (event) => {
-		let skill = {
-			id: [...this.state.skills].pop().id + 1,
-			title: event
-		};
-		this.setState({
-			skills: [...this.state.skills, skill]
-		})
+		if (this.state.skills.length === 0) {
+			this.state.skills = [];
+			let skill = {
+				id: 0,
+				title: event
+			};
+			this.setState({
+				skills: [...this.state.skills, skill]
+			})
+		}
+		else {
+			let skill = {
+				id: [...this.state.skills].pop().id + 1,
+				title: event
+			};
+			this.setState({
+				skills: [...this.state.skills, skill]
+			})
+		}
 	};
 
 	/**
@@ -96,12 +109,11 @@ class About extends Component {
 								</thead>
 								<tbody>
 								{this.state.skills.map((skill, index) =>
-
 									<tr key={skill.id}>
 										<td>{skill.id}</td>
 										<td>{skill.title}</td>
 										<td>
-											<button className="btn btn-danger text-white" onClick={() => this.onDeleteSkill(skill)}>X</button>
+											<button key={skill.id} className="btn btn-danger text-white" onClick={() => this.onDeleteSkill(skill)}>X</button>
 										</td>
 									</tr>
 								)}
@@ -114,12 +126,6 @@ class About extends Component {
 
 		);
 	}
-
-	onDel(index) {
-
-	}
-
-
 }
 
 export default About;
