@@ -1,16 +1,17 @@
 import './App.css';
-import React from "react";
+import React                                from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
-import Counter from "./components/Counter";
-import About from "./components/About";
-import Gallery from "./components/Gallery";
+import Counter                              from "./components/Counter";
+import About                                from "./components/About";
+import Gallery                              from "./components/Gallery";
 
 
 /**
- * COMPOSANT STATELESS CAR C'EST UNE FONCTION qui retourne un rendu (le composant Stateful est un composant avec une classe)
+ * COMPOSANT STATELESS
+ * Ce composant est une FONCTION (à la difference du composant Stateful qui est un composant avec une classe)
  *
- * MENU ET ROUTING
+ * MENU ET ROUTING :
  * Pour disposer de la fonctionnalité, il faut lancer 'npm i --save react-router' et 'npm i --save react-router-dom'
  * Puis declarer les imports 'BrowserRouter, Link, Route, Switch' dans la page
  *
@@ -24,7 +25,7 @@ function App() {
 	 });*/
 
 
-	/*Declaration d'une' constante pour les paths*/
+	/*Declaration d'une' constante pour les key des composants*/
 	const routs = [
 		{path: '/', element: 'todo'},
 		{path: '/counter', element: <Counter/>},
@@ -35,6 +36,7 @@ function App() {
 	return (
 
 		<BrowserRouter>
+			{/*LINK fournit le lien vers le composant*/}
 			<nav className="navbar navbar-expand navbar-brand m-2">
 				<ul className="navbar-nav">
 					<li key={routs.id} className="nav-link"><Link to="/">Home</Link></li>
@@ -48,7 +50,7 @@ function App() {
 				<Switch>
 					<Route exact path="/"></Route>
 					<Route path="/counter"><Counter/></Route>
-					<Route path="/about"><About/></Route>
+					<Route path="/about" ><About inputMessage="Presentation CV" /></Route>
 					<Route path="/gallery"><Gallery/></Route>
 					{/*<Route path="/:id"><p>n'importe quelle autre route</p></Route>*/}
 				</Switch>
@@ -65,8 +67,7 @@ function App() {
 		 </div>
 		 </div>
 		 }*/
-	)
-		;
+	);
 }
 
 export default App;
