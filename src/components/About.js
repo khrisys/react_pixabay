@@ -26,7 +26,6 @@ class About extends Component {
 	}
 
 
-
 	/**
 	 * Construction d'un objet 'skill' et à la liste des skills existantes
 	 *
@@ -43,6 +42,12 @@ class About extends Component {
 		})
 	};
 
+	/**
+	 * Supression dune competence de la liste
+	 *
+	 * En param, on doit mettre la competence à supprimer et non pas l'index. C'est la competence ('skill') envoyé depuis le DOM qui sera utilisé par indexOf()
+	 * La methode 'slice()' supprime la skill voulue
+	 **/
 	onDeleteSkill(skill) {
 		let index = this.state.skills.indexOf(skill);
 		let skills = [...this.state.skills];
@@ -73,7 +78,7 @@ class About extends Component {
 						<div className="card-header">Skills</div>
 						<div className="card-body">
 							<div>
-								<SkillForm onAddNewSkill={this.onAddNewSkill} />
+								<SkillForm onAddNewSkill={this.onAddNewSkill}/>
 							</div>
 							{/*		<form onSubmit={this.addSkill}>
 							 <div>
@@ -96,7 +101,7 @@ class About extends Component {
 										<td>{skill.id}</td>
 										<td>{skill.title}</td>
 										<td>
-											<button className="btn btn-danger text-white" onClick={() => this.onDeleteSkill(index)}>X</button>
+											<button className="btn btn-danger text-white" onClick={() => this.onDeleteSkill(skill)}>X</button>
 										</td>
 									</tr>
 								)}
