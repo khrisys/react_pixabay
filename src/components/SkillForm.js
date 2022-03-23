@@ -17,7 +17,8 @@ class SkillForm extends Component {
 	/**
 	 * Cette methode semble obligatoire sur un formulaire.
 	 *
-	 * la methode 'onChange()' recoit automatiquement un param de type 'event'. On met un 'event' sur le composant sur lequel se produit l'evenement.
+	 * la methode 'onChange()' recoit automatiquement un param de type 'event'.
+	 * On met un 'event' sur le composant sur lequel se produit l'evenement.
 	 * A partir de 'event, je recupere la valeur de la zone de texte
 	 * C'est le TWO-WAY-BINDING
 	 */
@@ -28,13 +29,15 @@ class SkillForm extends Component {
 	};
 
 	/**
-	 * Récuperation de la valeur de la skill grace à l'event.
+	 * Récuperation de la valeur de la skill saisie dans la zone de texte.
 	 * On passe le param de la skillValue dans la methode 'onAddNewSkill()' que je recupere dans le composant 'About' (mais ca pourrait etre n'importe quel composant , du
 	 * moment que j'y declare 'onAddNewSkill()'), puis je remet la valeur de la skill à vide
 	 * NE PAS OUBLIER DE DECLARER LE BINDING DANS LE CONSTRUCTEUR
 	 *
-	 * event.preventDefault empeche le onSubmit() de se propager lorsque le navigateur envoie la requete. Un onSubmit() dans un formulaire envoie une requete au server et
-	 * recharge la page. Si la page complete est redchargée à chaque fois, alors mon ajout de skill ne sera jamais pris en compte. preventDefault empeche ce comportement par
+	 * A partir de 'event, je recupere la valeur de la zone de texte. C'est le TWO-WAY-BINDING
+	 *
+	 * event.preventDefault empeche onSubmit() de se propager lorsque le navigateur envoie la requete. Normalement, onSubmit() dans un formulaire envoie une requete au server et
+	 * recharge la page. Or, si la page complete est rechargée à chaque fois, alors mon ajout de skill ne sera jamais pris en compte. preventDefault empeche ce comportement par
 	 * defaut du onSubmit()
 	 */
 	onAddSkill = (event) => {
@@ -44,6 +47,21 @@ class SkillForm extends Component {
 			skillValue:''
 		})
 	};
+
+	componentDidCatch(error, errorInfo) { console.log("")
+	}
+	componentDidMount() {console.log("SkillForm did mount")
+	}
+	componentDidUpdate(prevProps, prevState, snapshot) { console.log("SkillForm did update")
+	}
+	UNSAFE_componentWillMount() { console.log("SkillForm will mount")
+	}
+	UNSAFE_componentWillReceiveProps(nextProps, nextContext) {console.log("SkillForm will receive props")
+	}
+	componentWillUnmount() { console.log("SkillForm will unmount")
+	}
+	UNSAFE_componentWillUpdate(nextProps, nextState, nextContext) { console.log("SkillForm will update")
+	}
 
 	render() {
 		return (

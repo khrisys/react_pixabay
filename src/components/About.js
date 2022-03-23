@@ -70,6 +70,23 @@ class About extends Component {
 		})
 	}
 
+	componentDidCatch(error, errorInfo) { console.log("")
+	}
+	componentDidMount() {console.log("About did mount")
+	}
+	componentDidUpdate(prevProps, prevState, snapshot) { console.log("About did update")
+	}
+	UNSAFE_componentWillMount() { console.log("About will mount")
+	}
+	UNSAFE_componentWillReceiveProps(nextProps, nextContext) {console.log("About will receive props")
+	}
+	componentWillUnmount() { console.log("About will unmount")
+	}
+	UNSAFE_componentWillUpdate(nextProps, nextState, nextContext) { console.log("About will update")
+	}
+	/*shouldComponentUpdate(nextProps, nextState, nextContext) { console.log("component should update")
+	}*/
+
 
 	render() {
 		return (
