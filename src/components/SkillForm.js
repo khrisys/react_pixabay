@@ -48,20 +48,14 @@ class SkillForm extends Component {
 		})
 	};
 
-	componentDidCatch(error, errorInfo) { console.log("")
+/*	componentDidCatch(error, errorInfo) { console.log("")
 	}
 	componentDidMount() {console.log("SkillForm did mount")
 	}
 	componentDidUpdate(prevProps, prevState, snapshot) { console.log("SkillForm did update")
 	}
-	UNSAFE_componentWillMount() { console.log("SkillForm will mount")
-	}
-	UNSAFE_componentWillReceiveProps(nextProps, nextContext) {console.log("SkillForm will receive props")
-	}
 	componentWillUnmount() { console.log("SkillForm will unmount")
-	}
-	UNSAFE_componentWillUpdate(nextProps, nextState, nextContext) { console.log("SkillForm will update")
-	}
+	}*/
 
 	render() {
 		return (

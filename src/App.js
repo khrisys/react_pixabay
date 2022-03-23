@@ -27,7 +27,7 @@ function App() {
 
 	/*Declaration d'une' constante pour les key des composants*/
 	const routs = [
-		{path: '/', element: 'todo'},
+		{path: '/', element: ''},
 		{path: '/counter', element: <Counter/>},
 		{path: '/about', element: <About/>},
 		{path: '/gallery', element: <Gallery/>}
@@ -48,7 +48,7 @@ function App() {
 			{/*SWITCH fournit la route du composant*/}
 			<div className="container">
 				<Switch>
-					<Route exact path="/"></Route>
+					<Route exact path="/"/>
 					<Route path="/counter"><Counter/></Route>
 					<Route path="/about" ><About inputMessage="Presentation CV" /></Route>
 					<Route path="/gallery"><Gallery/></Route>
