@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 import Counter                              from "./components/Counter";
 import About                                from "./components/About";
-import Gallery                              from "./components/Gallery";
+import Gallery                              from "./components/Gallery/Gallery";
 
 
 /**
@@ -39,18 +39,23 @@ function App() {
 			{/*LINK fournit le lien vers le composant*/}
 			<nav className="navbar navbar-expand navbar-brand m-2">
 				<ul className="navbar-nav">
-					<li key={routs.id} className="nav-link"><Link to="/">Home</Link></li>
-					<li key={routs.id} className="nav-link"><Link to="/counter">Counter</Link></li>
-					<li key={routs.id} className="nav-link"><Link to="/about">About</Link></li>
-					<li key={routs.id} className="nav-link"><Link to="/gallery">Gallery</Link></li>
+					<li key={routs.id}
+					    className="nav-link"><Link to="/">Home</Link></li>
+					<li key={routs.id}
+					    className="nav-link"><Link to="/counter">Counter</Link></li>
+					<li key={routs.id}
+					    className="nav-link"><Link to="/about">About</Link></li>
+					<li key={routs.id}
+					    className="nav-link"><Link to="/gallery">Gallery</Link></li>
 				</ul>
 			</nav>
 			{/*SWITCH fournit la route du composant*/}
 			<div className="container">
 				<Switch>
-					<Route exact path="/"/>
+					<Route exact
+					       path="/"/>
 					<Route path="/counter"><Counter/></Route>
-					<Route path="/about" ><About inputMessage="Presentation CV" /></Route>
+					<Route path="/about"><About inputMessage="Presentation CV"/></Route>
 					<Route path="/gallery"><Gallery/></Route>
 					{/*<Route path="/:id"><p>n'importe quelle autre route</p></Route>*/}
 				</Switch>

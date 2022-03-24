@@ -11,7 +11,7 @@ class SkillForm extends Component {
 		this.state = {
 			skillValue: ''
 		};
-		this.onAddSkill=this.onAddSkill.bind(this);
+		this.onAddSkill = this.onAddSkill.bind(this);
 	}
 
 	/**
@@ -22,7 +22,7 @@ class SkillForm extends Component {
 	 * A partir de 'event, je recupere la valeur de la zone de texte
 	 * C'est le TWO-WAY-BINDING
 	 */
-	onChangeSkill = (event)=>{
+	onChangeSkill = (event) => {
 		this.setState({
 			skillValue: event.target.value
 		})
@@ -44,29 +44,34 @@ class SkillForm extends Component {
 		event.preventDefault();
 		this.props.onAddNewSkill(this.state.skillValue);
 		this.setState({
-			skillValue:''
+			skillValue: ''
 		})
 	};
 
-/*	componentDidCatch(error, errorInfo) { console.log("")
-	}
-	componentDidMount() {console.log("SkillForm did mount")
-	}
-	componentDidUpdate(prevProps, prevState, snapshot) { console.log("SkillForm did update")
-	}
-	componentWillUnmount() { console.log("SkillForm will unmount")
-	}*/
+	/*	componentDidCatch(error, errorInfo) { console.log("")
+	 }
+	 componentDidMount() {console.log("SkillForm did mount")
+	 }
+	 componentDidUpdate(prevProps, prevState, snapshot) { console.log("SkillForm did update")
+	 }
+	 componentWillUnmount() { console.log("SkillForm will unmount")
+	 }*/
 
 	render() {
 		return (
 			<div>
-				<form onSubmit={this.onAddSkill} >
+				<form onSubmit={this.onAddSkill}>
 					<div className="row">
 						<div className="col">
-							<input name="skill" className="form-control" placeholder="Skill to add" defaultValue={this.state.skillValue} onChange={this.onChangeSkill} />
+							<input name="skill"
+							       className="form-control"
+							       placeholder="Skill to add"
+							       defaultValue={this.state.skillValue}
+							       onChange={this.onChangeSkill}/>
 						</div>
 						<div className="col-auto">
-							<button className="btn btn-primary" type="submit">Add</button>
+							<button className="btn btn-primary"
+							        type="submit">Add</button>
 						</div>
 
 					</div>

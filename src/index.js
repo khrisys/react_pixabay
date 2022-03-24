@@ -1,16 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React           from 'react';
+import ReactDOM        from 'react-dom';
 import './index.css';
-import App from './App';
+import App             from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
+	<React.StrictMode>
+    <App/>
   </React.StrictMode>,
-    //TEMPLATE GENERAL DE L'APPLI QUI CONTIENNENT L'ENSEMBLE DES COMPOSANTS SINGLE PAGE
-  document.getElementById('root')
+	//TEMPLATE GENERAL DE L'APPLI QUI CONTIENNENT L'ENSEMBLE DES COMPOSANTS SINGLE PAGE
+	document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

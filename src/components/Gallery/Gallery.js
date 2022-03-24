@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-import axios              from 'axios';
+import axios              from 'axios/index';
 
 class Gallery extends Component {
-
-
-	const;
 
 	/**
 	 * Initialisation des variables utiles à l'ffichage des photos de pixabay. Ici, je mets des valeurs par defaut plutot que rien
@@ -66,7 +63,6 @@ class Gallery extends Component {
 		event.preventDefault();
 		this.getHits();
 	};
-
 	/**
 	 * Navigation via la pagination
 	 * Dans cette methode,on passe l'appel vers l'api pixabay en 2e param. La methode setState etant async, si on met setState() en dehors de setState, getHits() sera appelé
@@ -80,12 +76,6 @@ class Gallery extends Component {
 		}, () => {
 			this.getHits();
 		});
-	};
-
-	handleChange = (event, value) => {
-		this.setState({
-			currentPage: value
-		})
 	};
 
 
@@ -134,8 +124,6 @@ class Gallery extends Component {
 						)
 					}
 				</div>
-
-
 			{/*<Pagination count={this.state.totalPages}
 			 showFirstButton
 			 showLastButton
@@ -148,16 +136,7 @@ class Gallery extends Component {
 			 />*/}
 
 
-			<div>
-			 <ul className="nav nav-pills m-1">
-			 {this.state.nbPages.map((page, index) =>
-				 <button key={index + 1}
-				         className={this.state.currentPage === index + 1 ? 'btn btn-primary' : 'btn btn-link'}
-					 /*ONCLICK PREND ICI UNE FONCTION ANONYME EN PARAM, QUI APPELLE ALORS ONCLICKPAGINATION()*/
-					     onClick={() => this.onClickPagination(index + 1)}>{index + 1}</button>
-			 )}
-			 </ul>
-			 </div>
+
 			</div>;
 	}
 }
