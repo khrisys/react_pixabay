@@ -57,7 +57,7 @@ class Gallery extends Component {
 	 * Appeler la fonction getHits() dans el callback, sinon elle ne sera pas executée de maniere synchrone, le setState etant async par defaut
 	 * @param keyword mot-clef
 	 */
-	sendSearch = (keyword) => {
+	sendKeyword = (keyword) => {
 		this.setState({
 			keywordForm: keyword
 		}, () => {
@@ -97,7 +97,7 @@ class Gallery extends Component {
 					</ul>
 				</div>
 
-			<GallerySearchForm sendSearch={this.sendSearch}/>
+			<GallerySearchForm sendKeyword={this.sendKeyword}/>
 
 
 				<div className="row">

@@ -18,12 +18,12 @@ class GallerySearchForm extends Component {
 
 	/**
 	 * Envoi du mot clef de recherche vers le composant Gallery
-	 * La methode qui servira à passer le param est sendSearch = à declarer dans le composant Gallery, et le lier ici dans le constructeur
+	 * La methode qui servira à passer le param est sendKeyword = à declarer dans le composant Gallery, et le lier ici dans le constructeur
 	 * @param event
 	 */
 	onSubmitResearch = (event) => {
 		event.preventDefault();
-		this.props.sendSearch(this.state.keywordForm);
+		this.props.sendKeyword(this.state.keywordForm);
 		this.setState({
 			keywordForm:''
 		})
