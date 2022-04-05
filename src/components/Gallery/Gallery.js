@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios              from 'axios/index';
+import GalleryDetails     from "./GalleryDetails";
+import GallerySearchForm  from "./GallerySearchForm";
 
 class Gallery extends Component {
 
@@ -17,7 +19,7 @@ class Gallery extends Component {
 			currentPage: 1,
 			totalPages: 1,
 			nbPages: []
-		}
+		};
 	}
 
 	/**
@@ -31,8 +33,8 @@ class Gallery extends Component {
 	 * Recuperation des photos (nommées 'hits' dans pixabay) depuis pixabay (importer la dependance axios pour les requetes apres 'npm i --save axios')
 	 */
 	getHits() {
-		let url = "https://pixabay.com/api/?key=" + this.state.api_key + "&q=" + this.state.keyword + "&per_page=" + this.state.pixs_per_page + "&page=" + this.state.currentPage;
-		console.log("URL DE REQUETE / " + url);
+		let url = "https://pixabay.com/api/?key=" + this.state.api_key + "&q=" + this.state.keywordForm + "&per_page=" + this.state.pixs_per_page + "&page=" + this.state.currentPage;
+		console.log("URL DE REQUETE GENERALE / " + url);
 		axios.get(url).then((resp) => {
 			let totalPages = (resp.data.totalHits % this.state.pixs_per_page === 0) ? resp.data.totalHits / this.state.pixs_per_page : Math.ceil(resp.data.totalHits / this.state.pixs_per_page);
 			this.setState({
@@ -45,24 +47,25 @@ class Gallery extends Component {
 		})
 	}
 
-	onChangeKeyword = (event) => {
-		this.setState({
-			keyword: event.target.value
-		})
-	};
-
 
 	/**
 	 * TWO WAY BINDING : la valeur de la zone de texte va vers le state > A chaque fois que le state change, il s'affiche dans la zone de texte (Le champ est controlé par React)
 	 *
 	 * event.preventDefault() intercepte l'evenement et stoppe l'evenement à ce niveau, il l'empeche de se propager. Autrement dit,on ne fait ici que l'appel de 'this.getHits()'
 	 * sans que le browser ne soit atteint et rafraichisse la page entiere, remettant par defaut le mot clef defini dans le constructeur.
-	 * @param event
+	 *
+	 * Appeler la fonction getHits() dans el callback, sinon elle ne sera pas executée de maniere synchrone, le setState etant async par defaut
+	 * @param keyword mot-clef
 	 */
-	onSubmitResearch = (event) => {
-		event.preventDefault();
-		this.getHits();
+	sendSearch = (keyword) => {
+		this.setState({
+			keywordForm: keyword
+		}, () => {
+			this.getHits();
+		});
+
 	};
+
 	/**
 	 * Navigation via la pagination
 	 * Dans cette methode,on passe l'appel vers l'api pixabay en 2e param. La methode setState etant async, si on met setState() en dehors de setState, getHits() sera appelé
@@ -81,64 +84,35 @@ class Gallery extends Component {
 
 	render() {
 		return <div>
-				<form onSubmit={this.onSubmitResearch}>
-					<div className="row m-2 p-2">
-						<div className="col">
-							<input type="text"
-							       className="form-control"
-							       placeholder="keyword"
-							       onChange={this.onChangeKeyword}
-							       value={this.state.keyword}/>
-						</div>
-						<div className="col-auto">
-							<button className="btn btn-primary"
-							        type="submit">Chercher</button>
-						</div>
-					</div>
-				</form>
+
 
 			<div>
 					<ul className="nav nav-pills">
 						{this.state.nbPages.map((page, index) =>
 							<button key={index + 1}
 							        className={this.state.currentPage === index + 1 ? 'btn btn-primary' : 'btn'}
-								/*ONCLICK PREND ICI UNE FONCTION ANONYME EN PARAM, QUI APPELLE ALORS ONCLICKPAGINATION()*/
-								    onClick={() => this.onClickPagination(index + 1)}>{index + 1}</button>
+
+							        onClick={() => this.onClickPagination(index + 1)}>{index + 1}</button>
 						)}
 					</ul>
 				</div>
+
+			<GallerySearchForm sendSearch={this.sendSearch}/>
+
+
 				<div className="row">
 					{
 						this.state.hits.map((hit, index) =>
-							<div className="col-md-4"
-							     key={index}>
-								<div className="card">
-									<div className="card-header">{hit.tags} | <strong>Resolution : </strong>{hit.webformatWidth} x {hit.webformatHeight}</div>
-									<div className="card-body"><img alt="Vignette manquante"
-									                                className="card-img"
-									                                height={200}
-									                                src={hit.webformatURL}
-									/></div>
-								</div>
-							</div>
+
+							<GalleryDetails key={index}
+							                hit={hit}/>
 						)
 					}
 				</div>
-			{/*<Pagination count={this.state.totalPages}
-			 showFirstButton
-			 showLastButton
-			 variant="outlined"
-			 color="primary"
-			 size="small"
-			 onChange={this.handleChange}
-			 page={this.state.currentPage}
-			 defaultPage={4}
-			 />*/}
-
-
-
 			</div>;
 	}
+
+
 }
 
 export default Gallery;
