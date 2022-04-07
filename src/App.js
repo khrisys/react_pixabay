@@ -5,7 +5,7 @@ import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 import Counter                              from "./components/Counter";
 import About                                from "./components/About";
 import Gallery                              from "./components/Gallery/Gallery";
-import GalleryDetails                       from "./components/Gallery/GalleryDetails";
+import GallerySingle                        from "./components/Gallery/GallerySingle";
 
 
 /**
@@ -58,8 +58,7 @@ function App() {
 					<Route path="/counter"><Counter/></Route>
 					<Route path="/about"><About inputMessage="Presentation CV"/></Route>
 					<Route path="/gallery"><Gallery/></Route>
-					<Route path="/detail/:id"><GalleryDetails/></Route>
-					{/*<Route path="/:id"><p>n'importe quelle autre route</p></Route>*/}
+					<Route path="/detail/:id" component={GallerySingle}></Route>
 				</Switch>
 			</div>
 		</BrowserRouter>

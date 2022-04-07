@@ -15,7 +15,7 @@ class Gallery extends Component {
 			hits: [],
 			api_key: '16870681-fc0731d7d44beb3487658dcec',
 			pixs_per_page: 9,
-			keyword: 'paris',
+			keywordForm: 'paris',
 			currentPage: 1,
 			totalPages: 1,
 			nbPages: []
@@ -105,7 +105,7 @@ class Gallery extends Component {
 						this.state.hits.map((hit, index) =>
 
 							<GalleryDetails key={index}
-							                hit={hit}/>
+							                hit={hit} />
 						)
 					}
 				</div>
