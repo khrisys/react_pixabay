@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77fbc496-3d36-44cb-a982-6346d4833324" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -69,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1023">
-              <caret line="53" column="3" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
+            <state relative-caret-position="500">
+              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -309,7 +310,7 @@
       <workItem from="1649318792769" duration="7584000" />
       <workItem from="1649326635890" duration="1835000" />
       <workItem from="1649362663218" duration="7642000" />
-      <workItem from="1649396778880" duration="5195000" />
+      <workItem from="1649396778880" duration="5938000" />
     </task>
     <task id="LOCAL-00001" summary="configuration de l'ide">
       <created>1646860898901</created>
@@ -479,11 +480,25 @@
       <option name="project" value="LOCAL" />
       <updated>1649401909174</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Config de deployement pour heroku">
+      <created>1649402024567</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649402024567</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Config de deployement pour heroku">
+      <created>1649402255084</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1649402255084</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158666000" />
+    <option name="totallyTimeSpent" value="159409000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,9 +525,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32939324" />
       <window_info anchor="bottom" id="Docker" order="7" weight="0.32939324" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32939324" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32939324" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32939324" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32939324" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32939324" />
       <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32939324" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32939324" />
@@ -808,8 +823,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
-          <caret line="53" column="3" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
+        <state relative-caret-position="500">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
         </state>
       </provider>
     </entry>
