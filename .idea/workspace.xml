@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77fbc496-3d36-44cb-a982-6346d4833324" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -60,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="160">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -172,28 +173,6 @@
             <path>
               <item name="react_youssfi" type="b2602c69:ProjectViewProjectNode" />
               <item name="react_beginning" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_youssfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_beginning" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_youssfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_beginning" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_youssfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_beginning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_youssfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_beginning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -310,7 +289,7 @@
       <workItem from="1649318792769" duration="7584000" />
       <workItem from="1649326635890" duration="1835000" />
       <workItem from="1649362663218" duration="7642000" />
-      <workItem from="1649396778880" duration="6827000" />
+      <workItem from="1649396778880" duration="8363000" />
     </task>
     <task id="LOCAL-00001" summary="configuration de l'ide">
       <created>1646860898901</created>
@@ -515,11 +494,32 @@
       <option name="project" value="LOCAL" />
       <updated>1649403372403</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Config de deployement pour heroku">
+      <created>1649403661714</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1649403661714</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Config de deployement pour heroku">
+      <created>1649403867238</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1649403867238</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Config de deployement pour heroku">
+      <created>1649405326689</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1649405326689</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160298000" />
+    <option name="totallyTimeSpent" value="161834000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -844,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="160">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
