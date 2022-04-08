@@ -51,7 +51,7 @@ class GallerySingle extends Component {
 						<div className="col-auto"
 						     key={this.state.hit.id}>
 								<div className="card">
-									<div className="card-header">{this.state.hit.tags} | <strong>Resolution : </strong>{this.state.hit.webformatWidth} x {this.state.hit.webformatHeight}</div>
+									<div className="card-header">{this.state.hit.tags} | <strong>Resolution : </strong>{this.state.hit.imageWidth} x {this.state.hit.imageHeight}</div>
 									<div className="card-body"><img alt="Vignette manquante"
 									                                src={this.state.hit.largeImageURL}
 									/>
@@ -60,9 +60,9 @@ class GallerySingle extends Component {
 									<div className="row">
 										<div className="m-1 mb-2"><strong>Auteur : </strong>{this.state.hit.user}</div>
 										<div className="col-auto">
-											<img height={100}
+											<img height={100} className="fst-italic"
 											     src={this.state.hit.userImageURL}
-											     alt="Image de l'auteur"/>
+											     alt="Image de l'auteur manquante"/>
 										</div>
 									</div>
 

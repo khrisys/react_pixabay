@@ -6,6 +6,7 @@ import Counter                              from "./components/Counter";
 import About                                from "./components/About";
 import Gallery                              from "./components/Gallery/Gallery";
 import GallerySingle                        from "./components/Gallery/GallerySingle";
+import Home                                 from "./components/Home";
 
 
 /**
@@ -28,7 +29,7 @@ function App() {
 
 	/*Declaration d'une' constante pour les key des composants*/
 	const routs = [
-		{path: '/', element: ''},
+		{path: '/', element: <Home/>},
 		{path: '/counter', element: <Counter/>},
 		{path: '/about', element: <About/>},
 		{path: '/gallery', element: <Gallery/>}
@@ -53,12 +54,12 @@ function App() {
 			{/*SWITCH fournit la route du composant*/}
 			<div className="container">
 				<Switch>
-					<Route exact
-					       path="/"/>
+					<Route exact  path="/" component={Home}/>
 					<Route path="/counter"><Counter/></Route>
 					<Route path="/about"><About inputMessage="Presentation CV"/></Route>
 					<Route path="/gallery"><Gallery/></Route>
-					<Route path="/detail/:id" component={GallerySingle}></Route>
+					<Route path="/detail/:id"
+					       component={GallerySingle}/>
 				</Switch>
 			</div>
 		</BrowserRouter>
