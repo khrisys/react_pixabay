@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77fbc496-3d36-44cb-a982-6346d4833324" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,10 +58,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/server.js">
+        <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="300">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -141,6 +141,7 @@
         <option value="$PROJECT_DIR$/src/components/Home.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/server.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -230,11 +231,11 @@
       <recent name="F:\WORKSPACES\workspace_Webstorm\react_beginning\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\WORKSPACES\workspace_Webstorm\react_beginning" />
+      <recent name="F:\WORKSPACES\workspace_Webstorm\react_beginning\src" />
+      <recent name="F:\WORKSPACES\workspace_Webstorm\react_beginning\public" />
       <recent name="F:\WORKSPACES\workspace_Webstorm\react_beginning\src\components\Gallery" />
       <recent name="F:\WORKSPACES\workspace_Webstorm\react_beginning\src\components" />
-      <recent name="F:\WORKSPACES\workspace_Webstorm\react_beginning\src\Gallery" />
-      <recent name="F:\WORKSPACES\workspace_Webstorm\react_beginning\public\images" />
-      <recent name="F:\WORKSPACES\workspace_Webstorm\react_beginning\public\%PUBLIC_URL%" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -309,7 +310,7 @@
       <workItem from="1649318792769" duration="7584000" />
       <workItem from="1649326635890" duration="1835000" />
       <workItem from="1649362663218" duration="7642000" />
-      <workItem from="1649396778880" duration="6500000" />
+      <workItem from="1649396778880" duration="6827000" />
     </task>
     <task id="LOCAL-00001" summary="configuration de l'ide">
       <created>1646860898901</created>
@@ -507,11 +508,18 @@
       <option name="project" value="LOCAL" />
       <updated>1649403091041</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Config de deployement pour heroku">
+      <created>1649403372403</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1649403372403</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159971000" />
+    <option name="totallyTimeSpent" value="160298000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,7 +534,7 @@
     <frame x="-7" y="-7" width="2575" height="1424" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49706227" visible="true" weight="0.24980299" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49706227" visible="true" weight="0.24980299" />
       <window_info id="Structure" order="1" sideWeight="0.5005875" side_tool="true" weight="0.24980299" />
       <window_info id="npm" order="2" sideWeight="0.50293773" side_tool="true" weight="0.24980299" />
       <window_info id="Favorites" order="3" sideWeight="0.5005875" side_tool="true" weight="0.24980299" />
@@ -540,7 +548,7 @@
       <window_info anchor="bottom" id="Docker" order="7" weight="0.32939324" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32939324" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32939324" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32939324" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32939324" />
       <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32939324" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32939324" />
@@ -834,10 +842,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server.js">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="300">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
