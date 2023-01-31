@@ -1,17 +1,18 @@
 import './App.css';
-import React                                from "react";
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
-import Counter                              from "./components/Counter";
-import About                                from "./components/About";
-import Gallery                              from "./components/Gallery/Gallery";
-import GallerySingle                        from "./components/Gallery/GallerySingle";
-import Home                                 from "./components/Home";
+import Counter from "./components/Counter";
+import About from "./components/About";
+import Gallery from "./components/Gallery/Gallery";
+import GallerySingle from "./components/Gallery/GallerySingle";
+import Home from "./components/Home";
+import MusicPlayer from "./components/Music/MusicPlayer";
 
 
 /**
  * COMPOSANT STATELESS
- * Ce composant est une FONCTION (à la difference du composant Stateful qui est un composant avec une classe)
+ * Ce composant stateless est une FONCTION (à la difference du composant Stateful qui est un composant avec une classe)
  *
  * MENU ET ROUTING :
  * Pour disposer de la fonctionnalité, il faut lancer 'npm i --save react-router' et 'npm i --save react-router-dom'
@@ -21,49 +22,54 @@ import Home                                 from "./components/Home";
  * @constructor
  */
 function App() {
-
+	
 	/*	browserHistory.listen(location => {
 	 browserHistory.push('/super/url');
 	 });*/
-
-
+	
+	
 	/*Declaration d'une' constante pour les key des composants*/
 	const routs = [
-		{path: '/', element: <Home/>},
-		{path: '/counter', element: <Counter/>},
-		{path: '/about', element: <About/>},
-		{path: '/gallery', element: <Gallery/>}
+		{path: '/', element: <Home />},
+		{path: '/counter', element: <Counter />},
+		{path: '/music', element: <MusicPlayer />},
+		{path: '/about', element: <About />},
+		{path: '/gallery', element: <Gallery />},
+	
 	];
-
+	
 	return (
-
+		
 		<BrowserRouter>
 			{/*LINK fournit le lien vers le composant*/}
 			<nav className="navbar navbar-expand navbar-brand m-2">
 				<ul className="navbar-nav">
 					<li key={routs.id}
-					    className="nav-link"><Link to="/">Home</Link></li>
+						className="nav-link"><Link to="/">Home</Link></li>
 					<li key={routs.id}
-					    className="nav-link"><Link to="/counter">Counter</Link></li>
+						className="nav-link"><Link to="/counter">Counter</Link></li>
 					<li key={routs.id}
-					    className="nav-link"><Link to="/about">About</Link></li>
+						className="nav-link"><Link to="/music">Music</Link></li>
 					<li key={routs.id}
-					    className="nav-link"><Link to="/gallery">Gallery</Link></li>
+						className="nav-link"><Link to="/about">About</Link></li>
+					<li key={routs.id}
+						className="nav-link"><Link to="/gallery">Gallery</Link></li>
 				</ul>
 			</nav>
 			{/*SWITCH fournit la route du composant*/}
 			<div className="container">
 				<Switch>
-					<Route exact  path="/" component={Home}/>
-					<Route path="/counter"><Counter/></Route>
-					<Route path="/about"><About inputMessage="Presentation CV"/></Route>
-					<Route path="/gallery"><Gallery/></Route>
+					<Route exact path="/" component={Home} />
+					<Route path="/counter"><Counter /></Route>
+					<Route path="/music"><MusicPlayer /></Route>
+					<Route path="/about"><About inputMessage="Presentation CV" /></Route>
+					<Route path="/gallery"><Gallery /></Route>
 					<Route path="/detail/:id"
-					       component={GallerySingle}/>
+						   component={GallerySingle} />
 				</Switch>
 			</div>
 		</BrowserRouter>
-
+		
 		/*	{		<div>
 		 <About inputMessage="Bimbo le bozo" />
 		 PROPS : transmettre des proprietes au composant Counter
